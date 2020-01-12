@@ -31,9 +31,10 @@ body{
     border-radius: 50%;
     padding: 0px;
     position: relative;
-    top: 100px;
+    top: 50%;
     left: 50%;
     margin-left: -250px;
+    margin-top: 70px;
     border: 13px solid #055928;
     background-color: #368f5b;
     animation-duration: 2s;
@@ -48,8 +49,10 @@ body{
         background-color: #ff595f;
         transform: rotate(-10deg);
         position: absolute;
-        top: 170px;
-        left: 470px;
+        top: 13%;
+        left: 47%;
+        margin-left: -250px;
+        margin-top: 70px;
         z-index: 1;
         animation-duration: 1s;
         animation-name: slide-in-left;
@@ -62,16 +65,18 @@ body{
     color: #ffcd57;
     font-size: 800%;
     transform: rotate(-10deg);
-    top: 160px;
-    left: 500px;
+    top: 11.8%;
+    left: 48.5%;
+    margin-left: -250px;
+    margin-top: 70px;
     z-index: 2;
     animation-duration: 2s;
     animation-name: bounce-in;
     animation-iteration-count: 1;
   }
   #tsq2{
-    top: 215px;
-    left: 930px;
+    top: 18.5%;
+    left: 78%;
   }
   #tsq2::after{
     content: "!";
@@ -83,9 +88,10 @@ body{
     position: absolute;
     background-color: var(--main-red);
     color: #ffcd57;
-    top: 400px;
-    left: 450px;
+    top: 50.7%;
+    left: 29.7%;
     font-size: 700%;
+    padding: 0px;
     border: none;
     transform: rotate(-10deg);
     z-index: 2;
