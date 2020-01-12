@@ -1,0 +1,204 @@
+body{
+    
+    animation-duration: 3s;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+  @keyframes pulsate {
+    0% {
+      
+              transform: scale(1);
+              
+    }
+    50% {
+      
+              transform: scale(1.1);
+              
+    }
+    100% {
+      
+              transform: scale(1);
+              
+    }
+  }
+.circle {
+    height: 500px;
+    width: 500px;
+
+    border-radius: 50%;
+    padding: 0px;
+    position: relative;
+    top: 100px;
+    left: 50%;
+    margin-left: -250px;
+    border: 13px solid #055928;
+    background-color: #368f5b;
+    animation-duration: 2s;
+    animation-name: pulsate;
+    animation-iteration-count: infinite;
+    
+  }
+  .square{
+        width: 600px;
+        height: 200px;
+        border: 13px solid #461650;
+        background-color: #ff595f;
+        transform: rotate(-10deg);
+        position: absolute;
+        top: 170px;
+        left: 470px;
+        z-index: 1;
+        animation-duration: 1s;
+        animation-name: slide-in-left;
+        animation-iteration-count: 1;
+  }
+  .textOnSquare{
+    font-family: 'Luckiest Guy', cursive;
+    font-style: italic;
+    position: absolute;
+    color: #ffcd57;
+    font-size: 800%;
+    transform: rotate(-10deg);
+    top: 160px;
+    left: 500px;
+    z-index: 2;
+    animation-duration: 2s;
+    animation-name: bounce-in;
+    animation-iteration-count: 1;
+  }
+  #tsq2{
+    top: 215px;
+    left: 930px;
+  }
+  #tsq2::after{
+    content: "!";
+    
+  }
+  button {
+    font-family: 'Luckiest Guy', cursive;
+    font-style: italic;
+    position: absolute;
+    background-color: var(--main-red);
+    color: #ffcd57;
+    top: 400px;
+    left: 450px;
+    font-size: 700%;
+    border: none;
+    transform: rotate(-10deg);
+    z-index: 2;
+    transition-property: color;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+  }
+
+  button:hover {
+    animation-name: jello;
+    animation-duration: 1s;
+    color: #461650;
+  }
+  @keyframes bounce-in{
+    0% {
+        transform: scale(7);
+        animation-timing-function: ease-in;
+      opacity: 0;
+    }
+    38% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+      opacity: 1;
+    }
+    55% {
+        transform: scale(1.5);
+        animation-timing-function: ease-in;
+    }
+    72% {
+      
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
+    81% {
+        transform: scale(1.24);
+        animation-timing-function: ease-in;
+    }
+    89% {
+      
+              transform: scale(1);
+      
+              animation-timing-function: ease-out;
+    }
+    95% {
+      
+              transform: scale(1.04);
+      
+              animation-timing-function: ease-in;
+    }
+    100% {
+      
+              transform: scale(1);
+      
+              animation-timing-function: ease-out;
+    }
+  }
+  
+  @keyframes slide-in-left {
+    0% {
+     
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes jello {
+    0% {
+     
+              transform: skew(0deg 0deg);
+    }
+    30% {
+      
+              transform: skew(25deg 25deg);
+    }
+    40% {
+      
+              transform: skew(-15deg, -15deg);
+    }
+    50% {
+     
+              transform: skew(15deg, 15deg);
+    }
+    65% {
+     
+              transform: skew(-5deg, -5deg);
+    }
+    75% {
+      
+              transform: skew(5deg, 5deg);
+    }
+    100% {
+      
+              transform: skew(0deg 0deg);
+    }
+  }
+
+  @keyframes color-change {
+    0% {
+      background:#1c2c4a;
+    }
+    50% {
+      background: #1c4a45;
+    }
+    100% {
+      background: #414a1c;
+    }
+  }
+  
+
+  
+  
