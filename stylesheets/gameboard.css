@@ -1,0 +1,26 @@
+body{
+    animation-duration: 3s;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+.board{
+    width: 450px;
+    position:fixed;
+    top: 34%;
+    left: 39%;
+}
+
+@keyframes color-change {
+    0% {
+      background:#1c2c4a;
+    }
+    50% {
+      background: #1c4a45;
+    }
+    100% {
+      background: #414a1c;
+    }
+  }
+  

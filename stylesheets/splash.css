@@ -32,8 +32,8 @@ body{
     padding: 0px;
     position: fixed;
     top: 50%;
-    left: 50%;
     margin-top: -250px;
+    left: 50%;
     margin-left: -250px;
     border: 13px solid #055928;
     background-color: #368f5b;
@@ -60,7 +60,7 @@ body{
     font-family: 'Luckiest Guy', cursive;
     font-style: italic;
     position: absolute;
-    color: #ffcd57;
+    color: #f3c14d;
     font-size: 800%;
     
     top: -31px;
@@ -72,7 +72,7 @@ body{
   }
   #tsq2{
     top: 65px;
-    left: 450px;
+    left: 250px;
   }
   #tsq2::after{
     content: "!";
@@ -168,11 +168,11 @@ body{
     }
     40% {
       
-              transform: skew(-15deg, -15deg);
+              transform: skew(-10deg, -10deg);
     }
     50% {
      
-              transform: skew(15deg, 15deg);
+              transform: skew(10deg, 10deg);
     }
     65% {
      
