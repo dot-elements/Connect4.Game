@@ -1,26 +1,31 @@
 body{
-    animation-duration: 3s;
-    animation-name: color-change;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: alternate;
+  text-align: center;
 }
-.board{
-    width: 450px;
-    position:fixed;
-    top: 34%;
-    left: 39%;
+#game{
+  background-color: yellow;
+  display: inline-block;
 }
-
-@keyframes color-change {
-    0% {
-      background:#1c2c4a;
-    }
-    50% {
-      background: #1c4a45;
-    }
-    100% {
-      background: #414a1c;
-    }
-  }
-  
+.col{
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  background-color: white;
+  border-radius: 50%;
+  margin: 5px;
+  border: none;
+}
+.col.empty{
+  cursor: pointer;
+}
+.next-red{
+  background-color: rgba(255,0,0,0.2);
+}
+.next-black{
+  background-color: rgba(0,0,0,0.2);
+}
+.col.red{
+  background-color: red;
+}
+.col.black{
+  background-color: black;
+}
