@@ -1,16 +1,16 @@
 $(document).ready(function(){
-    const connect4=new Connect4('#connect4');
+    const game=new Game('#game');
 
-    connect4.playerSwitch=function(){
-        $('#player').text(connect4.player);
+    game.playerSwitch=function(){
+        $('#player').text(game.player);
     }
     $('#restart').click(function(){
-        connect4.restart();
+        game.restart();
     })
 });
 
 
-class Connect4{
+class Game{
     constructor(selector){
         this.ROWS=6;
         this.COLS=7;
