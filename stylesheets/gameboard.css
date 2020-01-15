@@ -1,36 +1,52 @@
 body{
   text-align: center;
+  animation-duration: 3s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
 }
 #game{
-  /*background-color: yellow;*/
+  
   display: inline-block;
   
   
 }
 .row{
-  height: 70px;
+  height: 75px;
 }
 .col{
-  width: 70px;
-  height: 70px;
+  width: 75px;
+  height: 75px;
   display: inline-block;
-  background-color: white;
-  /*border-radius: 50%;*/
-
+  
+  
   margin: 0px;
+  background-image: url("Background for ball.png");
 }
 .col.empty{
   cursor: pointer;
 }
 .next-red{
-  background-color: rgba(255,0,0,0.2);
+  background-color: rgba(255,0,0,0.5);
 }
 .next-black{
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.5);
 }
 .col.red{
   background-color: red;
 }
 .col.black{
   background-color: black;
+}
+@keyframes color-change {
+  0% {
+    background:#1c2c4a;
+  }
+  50% {
+    background: #1c4a45;
+  }
+  100% {
+    background: #414a1c;
+  }
 }
