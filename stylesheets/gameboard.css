@@ -2,17 +2,22 @@ body{
   text-align: center;
 }
 #game{
-  background-color: yellow;
+  /*background-color: yellow;*/
   display: inline-block;
+  
+  
+}
+.row{
+  height: 70px;
 }
 .col{
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   display: inline-block;
   background-color: white;
-  border-radius: 50%;
-  margin: 5px;
-  border: none;
+  /*border-radius: 50%;*/
+
+  margin: 0px;
 }
 .col.empty{
   cursor: pointer;
