@@ -1,0 +1,67 @@
+1.2) Ìt's almost the same.
+1.3) The Transfer-Encoding header specifies the form of encoding used to safely transfer the payload body to the user.
+1.4)cache-control: no-store:
+			The cache should not store anything about the client request or server response.
+		   no-cache:
+			Caches must check with the origin server for validation before using the cached copy.
+		   must-revalidate:
+			Indicates that once a resource becomes stale, caches must not use their stale copy without successful validation on the origin server.
+		   If both post-check and pre-check are specified and set to 0, both are entirely ignored.
+2.1)If it's smaller it's going to drop charaters from the String
+    If it's bigger it's going to expect more characters and it's going to wait even though you pressed enter after the string.
+3.1) for future HTTP requests the browser automatically sends along the stored username/password.It doesn't wait for another request.
+3.2) You recieve 401 UNAUTHORIZED
+
+HEAD /basic-auth/user/passwd HTTP/1.1
+host:httpbin.org
+
+HTTP/1.1 401 UNAUTHORIZED
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Origin: *
+Content-Length: 0
+Date: Wed, 15 Jan 2020 15:21:32 GMT
+Referrer-Policy: no-referrer-when-downgrade
+Server: nginx
+WWW-Authenticate: Basic realm="Fake Realm"
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Connection: keep-alive
+
+HEAD /basic-auth/user/passwd HTTP/1.1
+host:httpbin.org
+Authorization: Basic dXNlcjpwYXNzd2Q=
+
+HTTP/1.1 200 OK
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Origin: *
+Content-Length: 47
+Content-Type: application/json
+Date: Wed, 15 Jan 2020 15:26:47 GMT
+Referrer-Policy: no-referrer-when-downgrade
+Server: nginx
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Connection: keep-alive
+
+HEAD /basic-auth/user/passwd HTTP/1.1
+host:httpbin.org
+
+HTTP/1.1 401 UNAUTHORIZED
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Origin: *
+Content-Length: 0
+Date: Wed, 15 Jan 2020 15:28:28 GMT
+Referrer-Policy: no-referrer-when-downgrade
+Server: nginx
+WWW-Authenticate: Basic realm="Fake Realm"
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1; mode=block
+Connection: keep-alive
+
+It is not the same because the browser does not remember your credential and expects the request again
+
+4.1)
+Connect 4
